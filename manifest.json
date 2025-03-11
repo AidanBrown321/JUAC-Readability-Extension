@@ -21,5 +21,11 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "action": {}
+  "action": {},
+  "icons": {
+    "16": "JUAC-icon.png",
+    "32": "JUAC-icon.png",
+    "64": "JUAC-icon.png",
+    "128": "JUAC-icon.png"
+  }
 }

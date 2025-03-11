@@ -17,7 +17,7 @@
 #readability-sidebar h2 {
   font-size: 18px;
   margin: 0 0 10px 0;
-  color: #1a73e8;
+  color: #008000;
   font-weight: 500;
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 8px;
@@ -58,7 +58,7 @@
 }
 
 #readability-sidebar #define-button {
-  background-color: #1a73e8;
+  background-color: #008000;
   color: white;
   border: none;
   padding: 4px 12px;
@@ -106,7 +106,7 @@
   min-height: 40px;
   font-size: 14px;
   line-height: 1.5;
-  border-left: 3px solid #1a73e8;
+  border-left: 3px solid #008000;
 }
 
 #readability-sidebar #readingLevel {
