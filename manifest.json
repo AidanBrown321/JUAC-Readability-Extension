@@ -17,7 +17,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["sidebar.css", "sidebar.html"],
+      "resources": ["sidebar.css", "sidebar.html", "OPTED-Dictionary.csv"],
       "matches": ["<all_urls>"]
     }
   ],
