@@ -16,7 +16,7 @@
 #readability-sidebar h2 {
   font-size: 18px;
   margin: 0 0 10px 0;
-  color: #008000;
+  color: #0b6623;
   font-weight: 500;
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 8px;
@@ -64,31 +64,34 @@
 }
 
 
-.section {
+.juac-section {
   padding: 16px;
   margin-bottom: 20px;
   border-radius: 12px;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.section:hover {
+.juac-section:hover {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
 
-h2 {
+.juac-header {
   font-size: 18px;
   margin-bottom: 10px;
   color: #0b6623;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 #grade-level {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #0b6623;
   margin-bottom: 10px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 
@@ -115,7 +118,7 @@ h2 {
   resize: vertical;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="number"] {
   width: 100%;
   padding: 10px;
@@ -124,14 +127,36 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
+} */
+
+#word-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color:white;
 }
 
-button {
+#sentence-count {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color:white;
+}
+
+#define-button {
   margin-top: 10px;
   padding: 10px;
   width: 100%;
   font-size: 14px;
-  background-color: #28a745;
+  background-color: #0b6623;
   color: white;
   border: none;
   border-radius: 6px;
@@ -139,7 +164,7 @@ button {
   transition: background-color 0.2s ease;
 }
 
-button:hover {
+#define-button:hover {
   background-color: #218838;
 }
 
@@ -147,7 +172,7 @@ button:hover {
   margin-top: 10px;
   padding: 8px;
   background-color: #f4f4f4;
-  border-left: 4px solid #28a745;
+  border-left: 4px solid #0b6623;
   border-radius: 4px;
   font-size: 14px;
 }

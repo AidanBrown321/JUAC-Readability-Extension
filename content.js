@@ -98,14 +98,14 @@ async function createSidebar() {
 function createFloatingButton() {
   const button = document.createElement("div");
   button.id = "readability-toggle-button";
-  button.innerHTML = "🔍"; // tried to match our icon
+  button.innerHTML = "&#128269;"; // tried to match our icon
   button.title = "Toggle Readability Sidebar";
   button.style.position = "fixed";
   button.style.bottom = "20px";
   button.style.right = "20px";
   button.style.width = "48px";
   button.style.height = "48px";
-  button.style.backgroundColor = "#28a745";
+  button.style.backgroundColor = "#0b6623";
   button.style.borderRadius = "50%";
   button.style.display = "flex";
   button.style.alignItems = "center";
