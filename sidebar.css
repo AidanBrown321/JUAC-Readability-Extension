@@ -2,24 +2,27 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 360px;
+  width: 360px !important;
   z-index: 9999;
   background-color: white;
   border-radius: 12px;
-  padding: 20px;
+  padding: 20px !important;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   font-family: 'Segoe UI', sans-serif;
+  font-size: 16px !important;
+  overflow-y:scroll;
+  height: 90%;
 }
 
-
-
-#readability-sidebar h2 {
-  font-size: 18px;
+p#juac-header-grade.juac-header, p#juac-header-sum.juac-header, p#juac-header-def.juac-header {
+  font-size: 20px;
   margin: 0 0 10px 0;
   color: #0b6623;
   font-weight: 500;
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 8px;
+  font-weight: bold;
+  width: 100%;
 }
 
 #readability-sidebar .section {
@@ -56,14 +59,6 @@
   line-height: 1;
 }
 
-#readability-sidebar {
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
-  color: #333;
-  background-color: #f5f7fa;
-}
-
-
 .juac-section {
   padding: 16px;
   margin-bottom: 20px;
@@ -74,13 +69,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-.juac-section:hover {
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
 .juac-header {
-  font-size: 18px;
   margin-bottom: 10px;
   color: #0b6623;
   font-family: 'Segoe UI', sans-serif;
@@ -90,7 +79,6 @@
   font-size: 20px;
   font-weight: bold;
   color: #0b6623;
-  margin-bottom: 10px;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -118,17 +106,6 @@
   resize: vertical;
 }
 
-/* input[type="text"],
-input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-} */
-
 #word-input {
   width: 100%;
   padding: 10px;
@@ -145,7 +122,7 @@ input[type="number"] {
   width: 40px;
   height: 40px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
@@ -161,6 +138,7 @@ input[type="number"] {
 
 #num-sent {
   height: 30px;
+  font-size: 16px;
   padding-top: 10px;
   padding-bottom:0;
 }
@@ -168,7 +146,7 @@ input[type="number"] {
 #adjust {
   height: 30px;
   margin-right:0;
-  width: 50%;
+  width: 130px;
   text-align: right;
 }
 
@@ -176,7 +154,7 @@ input[type="number"] {
   margin-top: 10px;
   padding: 10px;
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   background-color: #0b6623;
   color: white;
   border: none;
@@ -234,4 +212,28 @@ input::-webkit-inner-spin-button {
   background-color: #0b6623;
   border-radius: 6px;
   color: white;
+}
+
+#grade-info, #sum-info, #def-info {
+  color: #0b6623;
+  position: relative;
+  float:right;
+}
+
+#grade-info:hover, #sum-info:hover, #def-info:hover {
+  cursor: pointer;
+}
+
+#grade-popup, #sum-popup, #def-popup {
+  visibility: hidden;
+  background-color: #f9f9f9;
+  color: black;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  right:35px;
+  width: 200px;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

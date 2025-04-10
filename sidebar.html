@@ -1,27 +1,32 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-<div class="juac-section">
-  <h2 class="juac-header">Reading Level</h2>
-  <div id="grade-level"></div>
-</div>
-<div class="juac-section">
-  <h2 class="juac-header">Summary</h2>
-  <textarea
-    id="summary-text"
-    readonly
-    placeholder="Summary will appear here..."
-  ></textarea>
-  <div id="sentence-selector">
-    <label id="num-sent" for="sent-count">Number of sentences:</label>
-    <div id="adjust">
-      <button id="dec"><i class="fas fa-minus"></i></button>
-      <input type="number" id="sentence-count" min="1" max="10" value="4" />
-      <button id="inc"><i class="fas fa-plus"></i></button> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<html>
+  <div class="juac-section">
+    <p id="juac-header-grade" class="juac-header">Reading Level<span id="grade-info"><i class="fa-regular fa-circle-question"></i></span></p>
+    <div id="grade-popup">This is calculated using the Spache-Allen Readability Formula.</div>
+    <div id="grade-level"></div>
+  </div>
+  <div class="juac-section">
+    <p id="juac-header-sum" class="juac-header">Summary<span id="sum-info"><i class="fa-regular fa-circle-question"></i></span></p>
+    <div id="sum-popup">Info about summary.</div>
+    <textarea
+      id="summary-text"
+      readonly
+      placeholder="Summary will appear here..."
+    ></textarea>
+    <div id="sentence-selector">
+      <label id="num-sent" for="sent-count">Number of sentences:</label>
+      <div id="adjust">
+        <button id="dec"><i class="fas fa-minus"></i></button>
+        <input type="number" id="sentence-count" min="1" max="10" value="4" />
+        <button id="inc"><i class="fas fa-plus"></i></button> 
+      </div>
     </div>
   </div>
-</div>
-<div class="juac-section">
-  <h2 class="juac-header">Define</h2>
-  <input type="text" id="word-input" placeholder="Enter a word to define" />
-  <button id="define-button">Define</button>
-  <div id="definition-display">Definition will appear here.</div>
-</div>
+  <div class="juac-section">
+    <p id="juac-header-def" class="juac-header">Define<span id="def-info"><i class="fa-regular fa-circle-question"></i></span></p>
+    <div id="def-popup">Use this to look things up.</div>
+    <input type="text" id="word-input" placeholder="Enter a word to define" />
+    <button id="define-button">Define</button>
+    <div id="definition-display">Definition will appear here.</div>
+  </div>
+</html>
