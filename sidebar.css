@@ -142,15 +142,34 @@ input[type="number"] {
 }
 
 #sentence-count {
-  width: 100%;
+  width: 40px;
+  height: 40px;
   padding: 10px;
-  margin-top: 8px;
-  font-size: 14px;
+  font-size: 20px;
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
   color: black;
   background-color:white;
+  text-align: center;
+}
+
+#sentence-selector {
+  padding-top: 10px;
+  display:flex;
+}
+
+#num-sent {
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom:0;
+}
+
+#adjust {
+  height: 30px;
+  margin-right:0;
+  width: 50%;
+  text-align: right;
 }
 
 #define-button {
@@ -179,3 +198,40 @@ input[type="number"] {
   font-size: 14px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#dec{
+  font-size: 20px;
+  background-color: white;
+  width:35px;
+  height:35px;
+  color: #0b6623;
+  border:none;
+  cursor: pointer;
+}
+
+#dec:hover {
+  background-color: #0b6623;
+  border-radius: 6px;
+  color: white;
+}
+
+#inc{
+  font-size: 20px;
+  background-color: white;
+  width:35px;
+  height:35px;
+  color: #0b6623;
+  border:none;
+  cursor: pointer;
+}
+
+#inc:hover {
+  background-color: #0b6623;
+  border-radius: 6px;
+  color: white;
+}

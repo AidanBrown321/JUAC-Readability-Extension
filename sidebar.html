@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="juac-section">
   <h2 class="juac-header">Reading Level</h2>
   <div id="grade-level"></div>
@@ -9,9 +10,13 @@
     readonly
     placeholder="Summary will appear here..."
   ></textarea>
-  <div class="sentence-selector">
-    <label for="sentence-count">Number of sentences:</label>
-    <input type="number" id="sentence-count" min="1" max="10" value="4" />
+  <div id="sentence-selector">
+    <label id="num-sent" for="sent-count">Number of sentences:</label>
+    <div id="adjust">
+      <button id="dec"><i class="fas fa-minus"></i></button>
+      <input type="number" id="sentence-count" min="1" max="10" value="4" />
+      <button id="inc"><i class="fas fa-plus"></i></button> 
+    </div>
   </div>
 </div>
 <div class="juac-section">

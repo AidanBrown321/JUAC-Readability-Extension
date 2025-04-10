@@ -92,6 +92,20 @@ async function createSidebar() {
   const score = Math.round((0.141 * avg_sentence_len) + (0.086 * percent_difficult_words) + 0.839);
 
   document.getElementById("grade-level").innerHTML = score;
+
+  document.getElementById('dec').addEventListener("click", async () => {
+    let number = document.querySelector('#sentence-count');
+    if (parseInt(number.value) > 0) {
+      number.value = parseInt(number.value) - 1;
+    }
+  });
+  
+  document.getElementById('inc').addEventListener("click", async () => {
+    let number = document.querySelector('#sentence-count');
+    if (parseInt(number.value) > 0) {
+      number.value = parseInt(number.value) + 1;
+    }
+  });
   
 }
 
@@ -133,8 +147,6 @@ function createFloatingButton() {
 }
 
 createFloatingButton();
-
-
 
 // Extension icon toggle
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
