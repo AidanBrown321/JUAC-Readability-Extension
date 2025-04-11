@@ -3,7 +3,7 @@
   top: 20px;
   right: 20px;
   width: 360px !important;
-  z-index: 9998;
+  z-index: 9999;
   background-color: white;
   border-radius: 12px;
   padding: 20px !important;
@@ -119,9 +119,9 @@ p#juac-header-grade.juac-header, p#juac-header-sum.juac-header, p#juac-header-de
 }
 
 #sentence-count {
-  width: 40px;
-  height: 40px;
-  padding: 10px;
+  width: 35px;
+  height: 35px;
+  padding: 8px;
   font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -129,26 +129,32 @@ p#juac-header-grade.juac-header, p#juac-header-sum.juac-header, p#juac-header-de
   color: black;
   background-color:white;
   text-align: center;
+  margin:0;
 }
 
 #sentence-selector {
   padding-top: 10px;
-  display:flex;
+  display:flex !important;
+  /* height: 300px; */
 }
 
 #num-sent {
   height: 30px;
   color: black;
   font-size: 16px;
-  padding-top: 10px;
+  margin:0;
+  padding-top: 5px;
   padding-bottom:0;
+  padding-right:0;
+  width:58%;
 }
 
 #adjust {
-  height: 30px;
-  margin-right:0;
-  width: 130px;
+  height: 35px;
+  /* width: 130px; */
+  margin-left: 0;
   text-align: right;
+  display: flex;
 }
 
 #define-button {
@@ -197,6 +203,8 @@ input::-webkit-inner-spin-button {
   color: #0b6623;
   border:none;
   cursor: pointer;
+  margin:0;
+  text-align: center;
 }
 
 #dec:hover {
@@ -213,6 +221,8 @@ input::-webkit-inner-spin-button {
   color: #0b6623;
   border:none;
   cursor: pointer;
+  margin:0;
+  text-align: center;
 }
 
 #inc:hover {
@@ -259,4 +269,16 @@ input::-webkit-inner-spin-button {
 #overlay {
   height: 100%;
   width: 100%;
+}
+
+.svg-inline--fa.fa-minus {
+  margin:0;
+  padding: 0;
+  display:inherit;
+}
+
+.svg-inline--fa.fa-plus {
+  margin:0;
+  padding: 0;
+  display:inherit;
 }
