@@ -1,13 +1,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-<html>
-  <div class="juac-section">
+<div id="grade-popup">This is the reading grade level of this web page. This number is calculated using the Spache-Allen Readability Formula.</div>
+<div id="sum-popup">This is a summary of the web page's content. You can adjust the number of sentences in the summary to make it longer or shorter using the '+' and '-' buttons.</div>
+<div id="def-popup">You can use this search bar to quickly look up the meaning of a word or phrase on this page that you don't recognize.</div>
+<div id="overlay">
+  <!-- <div id="grade-popup">This is calculated using the Spache-Allen Readability Formula.</div> -->
+  <div id="juac-section-grade" class="juac-section">
     <p id="juac-header-grade" class="juac-header">Reading Level<span id="grade-info"><i class="fa-regular fa-circle-question"></i></span></p>
-    <div id="grade-popup">This is calculated using the Spache-Allen Readability Formula.</div>
     <div id="grade-level"></div>
   </div>
-  <div class="juac-section">
+  <div id="juac-section-sum" class="juac-section">
     <p id="juac-header-sum" class="juac-header">Summary<span id="sum-info"><i class="fa-regular fa-circle-question"></i></span></p>
-    <div id="sum-popup">Info about summary.</div>
     <textarea
       id="summary-text"
       readonly
@@ -22,11 +24,10 @@
       </div>
     </div>
   </div>
-  <div class="juac-section">
+  <div id="juac-section-def" class="juac-section">
     <p id="juac-header-def" class="juac-header">Define<span id="def-info"><i class="fa-regular fa-circle-question"></i></span></p>
-    <div id="def-popup">Use this to look things up.</div>
     <input type="text" id="word-input" placeholder="Enter a word to define" />
     <button id="define-button">Define</button>
     <div id="definition-display">Definition will appear here.</div>
   </div>
-</html>
+</div>

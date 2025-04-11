@@ -100,38 +100,52 @@ async function createSidebar() {
   document.getElementById("grade-level").innerHTML = score;
 
   
+  // For the information buttons
   document.getElementById('grade-info').addEventListener("mouseover", () => {
     const popup = document.querySelector('#grade-popup');
     popup.style.visibility = 'visible';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '0.2';
   });
 
   document.getElementById('grade-info').addEventListener("mouseout", () => {
     const popup = document.querySelector('#grade-popup');
     popup.style.visibility = 'hidden';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '1';
   });
 
   document.getElementById('sum-info').addEventListener("mouseover", () => {
     const popup = document.querySelector('#sum-popup');
     popup.style.visibility = 'visible';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '0.2';
   });
 
   document.getElementById('sum-info').addEventListener("mouseout", () => {
     const popup = document.querySelector('#sum-popup');
     popup.style.visibility = 'hidden';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '1';
   });
 
   document.getElementById('def-info').addEventListener("mouseover", () => {
     const popup = document.querySelector('#def-popup');
     popup.style.visibility = 'visible';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '0.2';
   });
 
   document.getElementById('def-info').addEventListener("mouseout", () => {
     const popup = document.querySelector('#def-popup');
     popup.style.visibility = 'hidden';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '1';
   });
   
-}
+}  
 
+// Create floating button in lower right corner
 function createFloatingButton() {
   const button = document.createElement("div");
   button.id = "readability-toggle-button";
