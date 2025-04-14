@@ -10,19 +10,26 @@
   </div>
   <div id="juac-section-sum" class="juac-section">
     <p id="juac-header-sum" class="juac-header">Summary<span id="sum-info"><i class="fa-regular fa-circle-question"></i></span></p>
-    <textarea
-      id="summary-text"
-      readonly
-      placeholder="Summary will appear here..."
-    ></textarea>
-    <div id="sentence-selector">
-      <label id="num-sent" for="sent-count">Number of sentences:</label>
-      <div id="adjust">
-        <button id="dec"><i class="fas fa-minus"></i></button>
-        <input type="number" id="sentence-count" min="1" max="10" value="4" />
-        <button id="inc"><i class="fas fa-plus"></i></button> 
+
+    </p>
+       <label for="combined-textbox">
+        Paste text to summarize, then click Generate:
+      </label>
+      <textarea
+        id="combined-textbox"
+        placeholder="Paste or type text here..."
+        rows="6"
+      ></textarea>
+      <div id="summary-controls">
+        <label for="summary-length">Summary length:</label>
+        <select id="summary-length">
+          <option value="small">Small</option>
+          <option value="medium" selected>Medium</option>
+          <option value="large">Large</option>
+        </select>
       </div>
-    </div>
+      <button id="generate-button">Generate</button>
+
   </div>
   <div id="juac-section-def" class="juac-section">
     <p id="juac-header-def" class="juac-header">Define<span id="def-info"><i class="fa-regular fa-circle-question"></i></span></p>

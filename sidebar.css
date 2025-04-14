@@ -157,6 +157,7 @@ p#juac-header-grade.juac-header, p#juac-header-sum.juac-header, p#juac-header-de
   display: flex;
 }
 
+/* Define button */
 #define-button {
   margin-top: 10px;
   padding: 10px;
@@ -171,6 +172,24 @@ p#juac-header-grade.juac-header, p#juac-header-sum.juac-header, p#juac-header-de
 }
 
 #define-button:hover {
+  background-color: #218838;
+}
+
+/* Generate button */
+#generate-button {
+  margin-top: 8px;
+  padding: 8px;
+  width: 30%;
+  font-size: 14px;
+  background-color: #0b6623;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+#generate-button:hover {
   background-color: #218838;
 }
 
