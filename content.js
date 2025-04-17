@@ -101,44 +101,44 @@ async function createSidebar() {
 
   
   // For the information buttons
-  document.getElementById('grade-info').addEventListener("mouseover", () => {
+  document.getElementById('grade-info').addEventListener("click", () => {
     const popup = document.querySelector('#grade-popup');
-    popup.style.visibility = 'visible';
+    popup.style.display = 'block';
     const sidebar = document.querySelector('#overlay');
     sidebar.style.opacity = '0.2';
   });
 
-  document.getElementById('grade-info').addEventListener("mouseout", () => {
+  document.getElementById('sum-info').addEventListener("click", () => {
+    const popup = document.querySelector('#sum-popup');
+    popup.style.display = 'block';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '0.2';
+  });
+
+  document.getElementById('def-info').addEventListener("click", () => {
+    const popup = document.querySelector('#def-popup');
+    popup.style.display = 'block';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '0.2';
+  });
+
+  document.getElementById('grade-close-btn').addEventListener("click", () => {
     const popup = document.querySelector('#grade-popup');
-    popup.style.visibility = 'hidden';
+    popup.style.display = 'none';
+    const sidebar = document.querySelector('#overlay');
+    sidebar.style.opacity = '1';
+  });
+  
+  document.getElementById('sum-close-btn').addEventListener("click", () => {
+    const popup = document.querySelector('#sum-popup');
+    popup.style.display = 'none';
     const sidebar = document.querySelector('#overlay');
     sidebar.style.opacity = '1';
   });
 
-  document.getElementById('sum-info').addEventListener("mouseover", () => {
-    const popup = document.querySelector('#sum-popup');
-    popup.style.visibility = 'visible';
-    const sidebar = document.querySelector('#overlay');
-    sidebar.style.opacity = '0.2';
-  });
-
-  document.getElementById('sum-info').addEventListener("mouseout", () => {
-    const popup = document.querySelector('#sum-popup');
-    popup.style.visibility = 'hidden';
-    const sidebar = document.querySelector('#overlay');
-    sidebar.style.opacity = '1';
-  });
-
-  document.getElementById('def-info').addEventListener("mouseover", () => {
+  document.getElementById('def-close-btn').addEventListener("click", () => {
     const popup = document.querySelector('#def-popup');
-    popup.style.visibility = 'visible';
-    const sidebar = document.querySelector('#overlay');
-    sidebar.style.opacity = '0.2';
-  });
-
-  document.getElementById('def-info').addEventListener("mouseout", () => {
-    const popup = document.querySelector('#def-popup');
-    popup.style.visibility = 'hidden';
+    popup.style.display = 'none';
     const sidebar = document.querySelector('#overlay');
     sidebar.style.opacity = '1';
   });
