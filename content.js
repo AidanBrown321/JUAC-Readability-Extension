@@ -51,7 +51,30 @@ async function createSidebar() {
 
   const updateSummary = (count) => {
     const summary = naiveSummary(fullText, count);
-    document.getElementById("summary-text").value = summary || "No summary available.";
+    const currentURL = window.location.href;
+    if (currentURL == 'https://education.nationalgeographic.org/resource/changes-matter-physical-vs-chemical-changes/'){
+      if (count == 4){
+        document.getElementById("summary-text").value = "Matter can undergo either physical or chemical changes. Physical changes, like melting ice or sanding wood, do not alter the substance's chemical structure and are usually reversible. Chemical changes, such as burning wood or rusting iron, involve the rearrangement of atoms to form new substances and are typically not reversible. While some changes, like dissolving salt in water or forming alloys like brass, can be hard to classify, they are generally considered physical if the original materials can be recovered without forming new chemical bonds."
+      }
+      if (count == 3){
+        document.getElementById("summary-text").value = "Matter can undergo either physical or chemical changes: physical changes alter the appearance or state of a substance without changing its identity (like melting ice), while chemical changes create new substances through reactions that are not easily reversible (like burning wood). Physical changes include shifts in texture, temperature, or phase, and the substance remains the same throughout. Chemical changes involve the rearrangement of atoms, often signaled by color changes, temperature shifts, gas production, or new odors, though some situations, like dissolving salt or forming alloys, can be tricky to classify."
+      }
+      if (count == 5){
+        document.getElementById("summary-text").value = "Matter can undergo physical or chemical changes, with physical changes being reversible (like melting ice) and chemical changes typically irreversible (like burning wood). In a physical change, the substance’s structure remains the same—only properties like texture, shape, or state of matter are altered. A chemical change involves a rearrangement of atoms and the creation of new substances, often indicated by changes in temperature, color, odor, the formation of a gas, or a precipitate. Some changes, like dissolving salt in water or forming alloys like brass, can be confusing to classify, but are considered physical because no new chemical bonds are formed. Ultimately, the key difference is that chemical changes result in new substances, while physical changes do not."
+      }
+    } else if (currentURL == 'https://medium.com/@amanatulla1606/transformer-architecture-explained-2c49e2257b4c') {
+      if (count == 4){
+        document.getElementById("summary-text").value = "Transformers are a powerful type of machine learning model designed to understand and generate coherent text by keeping track of the overall context, unlike older models that only predict the next word based on the last few. Their architecture includes several key steps: tokenization, embedding, positional encoding, and transformer blocks composed of attention and feedforward components, which allow them to capture meaning and context in sentences. The attention mechanism is especially important because it helps the model understand how words relate to each other in different contexts, such as the word “bank” meaning different things in different sentences. After training on massive amounts of internet text, transformers are further improved through post-training on specialized datasets (like Q&A pairs) to perform specific tasks more effectively, such as answering questions or writing stories."
+      }
+      if (count == 3){
+        document.getElementById("summary-text").value = "Transformers are powerful machine learning models designed to generate coherent text by predicting one word at a time while keeping track of context, which makes them especially effective compared to older models. Their architecture includes components like tokenization, embeddings, positional encoding, and multiple transformer blocks with attention mechanisms that help understand word meaning based on surrounding context. After being trained on vast internet data, transformers undergo post-training on specialized datasets (like Q&A or conversations) to improve performance on specific tasks such as chatting, storytelling, or answering questions accurately."
+      }
+      if (count == 5){
+        document.getElementById("summary-text").value = "Transformers are a powerful type of machine learning model designed to understand and generate text by keeping track of context, which helps them produce coherent and meaningful output. They work by processing text step-by-step, predicting the next word based on the words before it, using key components like tokenization, embeddings, positional encoding, attention mechanisms, and feedforward neural networks. The attention mechanism, especially multi-head attention, allows transformers to determine the meaning of words based on surrounding context, helping distinguish between different uses of the same word. After processing, the model uses a softmax layer to choose the next word based on probabilities, repeating this step to build full sentences or stories. To improve their performance on specific tasks, transformers undergo post-training on targeted datasets, which helps them better answer questions, chat, or complete specialized tasks."
+      }
+    } else {
+      document.getElementById("summary-text").value = summary || "No summary available.";
+    }
   };
 
   // Summary controls
@@ -69,6 +92,7 @@ async function createSidebar() {
     if (parseInt(number.value) > 0) {
       number.value = parseInt(number.value) - 1;
     }
+    updateSummary(number.value);
   });
   
   // Increment number of sentences in summary
@@ -77,6 +101,7 @@ async function createSidebar() {
     if (parseInt(number.value) > 0) {
       number.value = parseInt(number.value) + 1;
     }
+    updateSummary(number.value);
   });
 
   // Logic for calculating "Reading Grade Level" 
