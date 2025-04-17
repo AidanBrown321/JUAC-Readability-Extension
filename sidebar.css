@@ -251,7 +251,7 @@ input::-webkit-inner-spin-button {
   /* padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 8px; */
-  padding: 10px;
+  padding: 15px;
   position: absolute;
   right: 18%;
   left: 18%;
@@ -300,8 +300,8 @@ input::-webkit-inner-spin-button {
   font-size: 28px;
   font-weight: bold;
   right: 0;
-  top:0;
-  padding-right: 10px;
+  top: 2px;
+  padding-right: 15px;
   position: absolute;
   /* padding-left: 2px; */
 }
@@ -318,13 +318,17 @@ input::-webkit-inner-spin-button {
   padding-top: 8px;
   padding-bottom:0px;
   margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: 'Segoe UI', sans-serif !important;
 }
 
 .juac-titles {
+  width: 100%;
   color:#0b6623;
-  padding:0;
-  margin:0;
+  padding: 0 0 5px 0;
+  margin: 0 0 5px 0;
   font-size: 18px !important;
   font-weight: bold;
   font-family: 'Segoe UI', sans-serif !important;
+  border-bottom: solid #ccc;
 }
