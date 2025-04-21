@@ -6,19 +6,22 @@
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type":"module"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
       "css": ["sidebar.css"],
-      "run_at": "document_idle"
+      "run_at": "document_idle",
+      "type": "module"
     }
   ],
   "web_accessible_resources": [
     {
       "resources": ["sidebar.css", "sidebar.html"],
+      "type": "module",
       "matches": ["<all_urls>"]
     }
   ],
