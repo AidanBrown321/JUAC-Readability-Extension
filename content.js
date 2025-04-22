@@ -53,7 +53,7 @@ async function createSidebar() {
   document.getElementById("generate-button").addEventListener("click", async () => {
     const inputText = document.getElementById("combined-textbox").value;
     selectedText = inputText;
-    const summarySize = document.getElementById("summary-length").value;
+    const summarySize = document.getElementById("sentence-count").value;
     const textbox = document.getElementById("combined-textbox");
 
     textbox.value = "Generating summary, please wait...";
@@ -81,22 +81,20 @@ async function createSidebar() {
   // updateSummary(defaultCount);
 
   // Decrement number of sentences in summary
-  // document.getElementById('dec').addEventListener("click", async () => {
-  //   let number = document.querySelector('#sentence-count');
-  //   if (parseInt(number.value) > 0) {
-  //     number.value = parseInt(number.value) - 1;
-  //   }
-  //   updateSummary(number.value);
-  // });
+  document.getElementById('dec').addEventListener("click", async () => {
+    let number = document.querySelector('#sentence-count');
+    if (parseInt(number.value) > 0) {
+      number.value = parseInt(number.value) - 1;
+    }
+  });
   
   // // Increment number of sentences in summary
-  // document.getElementById('inc').addEventListener("click", async () => {
-  //   let number = document.querySelector('#sentence-count');
-  //   if (parseInt(number.value) > 0) {
-  //     number.value = parseInt(number.value) + 1;
-  //   }
-  //   updateSummary(number.value);
-  // });
+  document.getElementById('inc').addEventListener("click", async () => {
+    let number = document.querySelector('#sentence-count');
+    if (parseInt(number.value) > 0) {
+      number.value = parseInt(number.value) + 1;
+    }
+  });
 
   // Logic for calculating "Reading Grade Level" 
   const regex = /\b\w+\b|[^a-zA-Z0-9\s]/g;
