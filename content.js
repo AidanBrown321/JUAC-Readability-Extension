@@ -163,7 +163,7 @@ let easy_words = ['a', 'able', 'about', 'above', 'across', 'act', 'add', 'afraid
 
 
 async function openaiSummarize(text, size) {
-  const response = await fetch("https://juac-readability-extension-qd9he59x7-jacks-projects-d35fab5a.vercel.app/api/summarize", {
+  const response = await fetch("https://juac-readability-extension-lu0mocazx-jacks-projects-d35fab5a.vercel.app/api/summarize", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
