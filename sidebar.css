@@ -105,7 +105,10 @@ p#juac-header-grade.juac-header, p#juac-header-sum.juac-header, p#juac-header-de
 }
 
 #summary-length {
-  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 #combined-textbox {
@@ -347,4 +350,33 @@ input::-webkit-inner-spin-button {
   font-weight: bold;
   font-family: 'Segoe UI', sans-serif !important;
   border-bottom: solid #ccc;
+}
+
+.lengths {
+  font-size: 16px;
+  background-color: white;
+  color: #0b6623;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  border:#0b6623 solid;
+  border-radius: 5px;
+  width: 75px;
+}
+
+.lengths:hover {
+  background-color: #0b6623;
+  border-radius: 6px;
+  color: white;
+}
+
+.lengths:focus {
+  background-color: #0b6623;
+  border-radius: 6px;
+  color: white;
+}
+
+.labels{
+  margin-bottom: 10px;
+  line-height: 1.5;
 }

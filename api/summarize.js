@@ -20,7 +20,8 @@ export default async function handler(req, res) {
     console.log("Incoming request body:", req.body);
     console.log("OPENAI_API_KEY present?", !!process.env.OPENAI_API_KEY);
 
-    const prompt = `Summarize the following text in ${size} sentences:\n\n${text}`;
+    // const prompt = `Summarize the following text in ${size} sentences:\n\n${text}`;
+    const prompt = `Summarize the following text in a ${size} summary:\n\n${text}`;
   
     try {
       const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {

@@ -13,6 +13,8 @@ async function createSidebar() {
   document.body.appendChild(sidebar);
   document.head.appendChild(link);
 
+  var summarySize = "very short";
+
   var selectedText;
 
   // "Define" button logic
@@ -43,17 +45,29 @@ async function createSidebar() {
     if (selectedText) {
       if (selectedText.split(" ").length == 1) {
         document.getElementById("word-input").value = selectedText.trim();
-      } else {
+      } else if (selectedText.split(" ").length > 1) {
         document.getElementById("combined-textbox").value = selectedText;
       }
     }
   });
 
+  document.getElementById('short').addEventListener("click", () => {
+    summarySize = "very short";
+  });
+
+  document.getElementById('medium').addEventListener("click", () => {
+    summarySize = "medium-length";
+  });
+
+  document.getElementById('long').addEventListener("click", () => {
+    summarySize = "long";
+  });
+
   // Summary button logic using Vercel
   document.getElementById("generate-button").addEventListener("click", async () => {
+    console.log(summarySize);
     const inputText = document.getElementById("combined-textbox").value;
-    selectedText = inputText;
-    const summarySize = document.getElementById("sentence-count").value;
+    // selectedText = inputText;
     const textbox = document.getElementById("combined-textbox");
 
     textbox.value = "Generating summary, please wait...";
@@ -80,21 +94,21 @@ async function createSidebar() {
   // const defaultCount = parseInt(document.getElementById("sentence-count").value);
   // updateSummary(defaultCount);
 
-  // Decrement number of sentences in summary
-  document.getElementById('dec').addEventListener("click", async () => {
-    let number = document.querySelector('#sentence-count');
-    if (parseInt(number.value) > 0) {
-      number.value = parseInt(number.value) - 1;
-    }
-  });
+  // // Decrement number of sentences in summary
+  // document.getElementById('dec').addEventListener("click", async () => {
+  //   let number = document.querySelector('#sentence-count');
+  //   if (parseInt(number.value) > 0) {
+  //     number.value = parseInt(number.value) - 1;
+  //   }
+  // });
   
   // // Increment number of sentences in summary
-  document.getElementById('inc').addEventListener("click", async () => {
-    let number = document.querySelector('#sentence-count');
-    if (parseInt(number.value) > 0) {
-      number.value = parseInt(number.value) + 1;
-    }
-  });
+  // document.getElementById('inc').addEventListener("click", async () => {
+  //   let number = document.querySelector('#sentence-count');
+  //   if (parseInt(number.value) > 0) {
+  //     number.value = parseInt(number.value) + 1;
+  //   }
+  // });
 
   // Logic for calculating "Reading Grade Level" 
   const regex = /\b\w+\b|[^a-zA-Z0-9\s]/g;

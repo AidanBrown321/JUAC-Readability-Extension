@@ -4,14 +4,14 @@
     <h5 class="juac-titles">Reading Level</h5>
     <span id="grade-close-btn" class="close">&times;</span>
   </div>
-  <p class="message">This is the reading grade level of the text on this page. This number is calculated using the Spache-Allen Readability Formula.</p>
+  <p class="message">This is the reading grade level of the text on this page, or the average level of education needed for a native English speaker to understand this text. It's calculated using the Spache-Allen Readability Formula.</p>
 </div>
 <div id="sum-popup">
   <div id="sum-content">
     <h5 class="juac-titles">Summary</h5>
     <span id="sum-close-btn" class="close">&times;</span>
   </div>
-  <p class="message">Paste or type text into the box below, or highlight text directly on the page. Adjust the number of sentences using the '+' and '-' buttons, and click the "Get Summary" button.</p>
+  <p class="message">Paste or type text into the box below, or highlight text directly on the page. Pick a summary length and click the "Get Summary" button.</p>
 </div>
 <div id="def-popup">
   <div id="def-content">
@@ -27,21 +27,34 @@
   </div>
   <div id="juac-section-sum" class="juac-section">
     <p id="juac-header-sum" class="juac-header">Summary<span id="sum-info"><i class="fa-regular fa-circle-question"></i></span></p>
-    <label for="combined-textbox">Paste, type, or highlight text on the page to summarize.</label>
+    <label for="combined-textbox" class="labels">Paste, type, or highlight text on the page to summarize.</label>
     <textarea id="combined-textbox" placeholder="Enter text..." rows="6"></textarea>
-    <div id="sentence-selector">
+    <!-- <div id="sentence-selector">
       <label id="num-sent" for="sent-count">Number of sentences:</label>
       <div id="adjust">
         <button id="dec"><i class="fas fa-minus"></i></button>
         <input type="number" id="sentence-count" min="2" max="6" value="4" />
         <button id="inc"><i class="fas fa-plus"></i></button> 
       </div>
+    </div> -->
+    <div id="summary-controls">
+      <label for="summary-length" class="labels">Summary length:</label>
+      <!-- <select id="summary-length">
+        <option value="short">Short</option>
+        <option value="medium" selected>Medium</option>
+        <option value="long">Long</option>
+      </select> -->
+      <div id="summary-length">
+        <button id="short" class="lengths">Short</button>
+        <button id="medium" class="lengths">Medium</button>
+        <button id="long" class="lengths">Long</button>
+      </div>
     </div>
     <button id="generate-button">Get Summary</button>
   </div>
   <div id="juac-section-def" class="juac-section">
     <p id="juac-header-def" class="juac-header">Define<span id="def-info"><i class="fa-regular fa-circle-question"></i></span></p>
-    <label for="word-input">Paste, type, or double click a word on the page to define.</label>
+    <label for="word-input" class="labels">Paste, type, or double click a word on the page to define.</label>
     <input type="text" id="word-input" placeholder="Enter text... " />
     <button id="define-button">Get Definition</button>
     <div id="definition-display">Definition will appear here.</div>
