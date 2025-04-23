@@ -80,30 +80,6 @@ p#juac-header-grade.juac-header, p#juac-header-sum.juac-header, p#juac-header-de
   font-family: 'Segoe UI', sans-serif;
 }
 
-
-#summary-text {
-  width: 100%;
-  min-height: 120px;
-  resize: vertical;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 14px;
-  background-color: #fdfdfd;
-}
-
-#summary-text {
-  color: #333;
-  background-color: #fdfdfd;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  width: 100%;
-  font-size: 14px;
-  resize: vertical;
-}
-
 #summary-length {
   width: 100%;
   display: flex;
@@ -111,57 +87,22 @@ p#juac-header-grade.juac-header, p#juac-header-sum.juac-header, p#juac-header-de
   margin-top: 10px;
 }
 
-#combined-textbox {
+textarea {
   margin-top: 10px !important;
+  resize: none;
+  min-height: 150px;
 }
 
 #word-input {
   width: 100%;
   padding: 10px !important;
   margin-top: 8px;
-  font-size: 16px;
+  font-size: 16px !important;
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
   color: black;
   background-color:white;
-}
-
-#sentence-count {
-  width: 35px;
-  height: 35px;
-  padding: 8px;
-  font-size: 18px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-  color: black;
-  background-color:white;
-  text-align: center;
-  margin:0;
-}
-
-#sentence-selector {
-  padding-top: 10px;
-  display:flex !important;
-}
-
-#num-sent {
-  height: 30px;
-  color: black;
-  font-size: 16px;
-  margin:0;
-  padding-top: 5px;
-  padding-bottom:0;
-  padding-right:0;
-  width:58%;
-}
-
-#adjust {
-  height: 35px;
-  margin-left: 0;
-  text-align: right;
-  display: flex;
 }
 
 /* Define button */

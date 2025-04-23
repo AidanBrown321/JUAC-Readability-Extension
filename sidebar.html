@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<!-- Popups -->
 <div id="grade-popup">
   <div id="grade-content">
     <h5 class="juac-titles">Reading Level</h5>
@@ -20,6 +21,8 @@
   </div>
   <p class="message">You can use this search bar to quickly look up the meaning of a word on this page that you don't recognize. Paste or type text into the box below, or double click a word on the page, and click the "Get Definition" button.</p>
 </div>
+
+<!-- Readability Sidbar -->
 <div id="overlay">
   <div id="juac-section-grade" class="juac-section">
     <p id="juac-header-grade" class="juac-header">Reading Level<span id="grade-info"><i class="fa-regular fa-circle-question"></i></span></p>
@@ -28,22 +31,9 @@
   <div id="juac-section-sum" class="juac-section">
     <p id="juac-header-sum" class="juac-header">Summary<span id="sum-info"><i class="fa-regular fa-circle-question"></i></span></p>
     <label for="combined-textbox" class="labels">Paste, type, or highlight text on the page to summarize.</label>
-    <textarea id="combined-textbox" placeholder="Enter text..." rows="6"></textarea>
-    <!-- <div id="sentence-selector">
-      <label id="num-sent" for="sent-count">Number of sentences:</label>
-      <div id="adjust">
-        <button id="dec"><i class="fas fa-minus"></i></button>
-        <input type="number" id="sentence-count" min="2" max="6" value="4" />
-        <button id="inc"><i class="fas fa-plus"></i></button> 
-      </div>
-    </div> -->
+    <textarea id="combined-textbox" placeholder="Enter text..."></textarea>
     <div id="summary-controls">
       <label for="summary-length" class="labels">Summary length:</label>
-      <!-- <select id="summary-length">
-        <option value="short">Short</option>
-        <option value="medium" selected>Medium</option>
-        <option value="long">Long</option>
-      </select> -->
       <div id="summary-length">
         <button id="short" class="lengths">Short</button>
         <button id="medium" class="lengths">Medium</button>

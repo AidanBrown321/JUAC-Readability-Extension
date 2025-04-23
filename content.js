@@ -15,8 +15,6 @@ async function createSidebar() {
 
   var summarySize = "very short";
 
-  var selectedText;
-
   // "Define" button logic
   document.getElementById("define-button").addEventListener("click", async () => {
     const word = document.getElementById("word-input").value.trim();
@@ -41,7 +39,7 @@ async function createSidebar() {
   });
 
   document.addEventListener('mouseup', function() {
-    selectedText = window.getSelection().toString();
+    const selectedText = window.getSelection().toString();
     if (selectedText) {
       if (selectedText.split(" ").length == 1) {
         document.getElementById("word-input").value = selectedText.trim();
@@ -65,9 +63,9 @@ async function createSidebar() {
 
   // Summary button logic using Vercel
   document.getElementById("generate-button").addEventListener("click", async () => {
-    console.log(summarySize);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
     const inputText = document.getElementById("combined-textbox").value;
-    // selectedText = inputText;
     const textbox = document.getElementById("combined-textbox");
 
     textbox.value = "Generating summary, please wait...";
@@ -83,32 +81,6 @@ async function createSidebar() {
   // Extract text from page
   const pTags = document.querySelectorAll("p");
   const pTexts = Array.from(pTags).map(p => p.textContent);
-  const fullText = pTexts.join(" ");
-
-  // // Summary controls
-  // document.getElementById("sentence-count").addEventListener("change", () => {
-  //   const count = parseInt(document.getElementById("sentence-count").value);
-  //   updateSummary(count);
-  // });
-
-  // const defaultCount = parseInt(document.getElementById("sentence-count").value);
-  // updateSummary(defaultCount);
-
-  // // Decrement number of sentences in summary
-  // document.getElementById('dec').addEventListener("click", async () => {
-  //   let number = document.querySelector('#sentence-count');
-  //   if (parseInt(number.value) > 0) {
-  //     number.value = parseInt(number.value) - 1;
-  //   }
-  // });
-  
-  // // Increment number of sentences in summary
-  // document.getElementById('inc').addEventListener("click", async () => {
-  //   let number = document.querySelector('#sentence-count');
-  //   if (parseInt(number.value) > 0) {
-  //     number.value = parseInt(number.value) + 1;
-  //   }
-  // });
 
   // Logic for calculating "Reading Grade Level" 
   const regex = /\b\w+\b|[^a-zA-Z0-9\s]/g;
@@ -127,7 +99,15 @@ async function createSidebar() {
   const avg_sentence_len = num_words / num_sentences;
   const percent_difficult_words = (num_spache_complex / num_words) * 100;
   const score = Math.round((0.141 * avg_sentence_len) + (0.086 * percent_difficult_words) + 0.839);
-  document.getElementById("grade-level").innerHTML = score;
+  const suffix = "th Grade";
+  if (score == 1) {
+    suffix = "st Grade";
+  } else if (score == 2) {
+    suffix = "nd Grade";
+  } else if (score == 3) {
+    suffix = "rd Grade";
+  }
+  document.getElementById("grade-level").innerHTML = score + suffix;
 
   document.getElementById('grade-info').addEventListener("click", () => {
     const popup = document.querySelector('#grade-popup');
