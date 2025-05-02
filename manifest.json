@@ -20,7 +20,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["sidebar.css", "sidebar.html"],
+      "resources": ["sidebar.css", "sidebar.html", "images/*"],
       "matches": ["<all_urls>"]
     }
   ],

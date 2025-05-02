@@ -38,11 +38,21 @@ async function createSidebar() {
     }
   });
 
+  const defineBtn = document.getElementById("define-button");
+  const inputField = document.getElementById("word-input");
+
+  inputField.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      defineBtn.click(); // Simulate button click
+    }
+  });
+
   document.addEventListener('mouseup', function() {
     const selectedText = window.getSelection().toString();
     if (selectedText) {
       if (selectedText.split(" ").length == 1) {
         document.getElementById("word-input").value = selectedText.trim();
+        defineBtn.click();
       } else if (selectedText.split(" ").length > 1) {
         document.getElementById("combined-textbox").value = selectedText;
       }
@@ -114,6 +124,8 @@ async function createSidebar() {
     popup.style.display = 'block';
     const sidebar = document.querySelector('#overlay');
     sidebar.style.opacity = '0.2';
+    const img = document.querySelector('#grade-img');
+    img.src = chrome.runtime.getURL('images/sa-formula.png');
   });
 
   document.getElementById('sum-info').addEventListener("click", () => {
@@ -121,6 +133,8 @@ async function createSidebar() {
     popup.style.display = 'block';
     const sidebar = document.querySelector('#overlay');
     sidebar.style.opacity = '0.2';
+    const img = document.querySelector('#sum-img');
+    img.src = chrome.runtime.getURL('images/summary.gif');
   });
 
   document.getElementById('def-info').addEventListener("click", () => {
@@ -128,6 +142,8 @@ async function createSidebar() {
     popup.style.display = 'block';
     const sidebar = document.querySelector('#overlay');
     sidebar.style.opacity = '0.2';
+    const img = document.querySelector('#def-img');
+    img.src = chrome.runtime.getURL('images/define.gif');
   });
 
   document.getElementById('grade-close-btn').addEventListener("click", () => {
